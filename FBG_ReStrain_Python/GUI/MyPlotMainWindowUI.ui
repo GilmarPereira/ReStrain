@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1137</width>
+    <height>906</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FBG_ReStrain V1.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>DESIGN_Resource/plot.png</normaloff>DESIGN_Resource/plot.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+      <item>
+       <layout class="QGridLayout" name="gridLayoutPlot">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Message Board:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPlainTextEdit" name="MessageBoard">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>252</red>
+                <green>255</green>
+                <blue>212</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>252</red>
+                <green>255</green>
+                <blue>212</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+          <property name="centerOnScroll">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_ClearMessageBoard">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Clear Message Board</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_64">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>FBG_ReStrain 2016 by Gilmar F. Pereira</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>FBG_ReStrain - Software to Sync FBG and Thermocouple Data &amp; Calculate Residual Strain</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>(1) Input (FBG and Thermocouple files)</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="1" column="0">
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Thermocouple Data (*.csv)</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="5" column="1">
+               <widget class="QComboBox" name="comboBox_TempSep">
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>; (default)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>tab</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>,</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Sep:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="8">
+               <widget class="QPushButton" name="pushButton_TempClearAll">
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Clear All</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QSpinBox" name="spinBox_SkipRowTemp">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="8">
+               <widget class="QPushButton" name="pushButton_RemoveTempFiles">
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Remove File</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="8">
+               <widget class="QPushButton" name="pushButton_LoadTempFiles">
+                <property name="text">
+                 <string>Add Files</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="5">
+               <widget class="QSpinBox" name="spinBox_TempNumber">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QLabel" name="label_31">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Skip Row:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="4">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Number of Thermocouples:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="6">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>Time Zone Correction (h)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="7">
+               <widget class="QSpinBox" name="spinBox_TimeCorrection">
+                <property name="minimum">
+                 <number>-99</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" rowspan="5" colspan="8">
+               <widget class="QListWidget" name="listWidget_InputTemp">
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="8">
+               <widget class="QPushButton" name="pushButton_FilesFormat_Term">
+                <property name="text">
+                 <string>Files Format</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>DESIGN_Resource/Infobox_info_icon.svg.png</normaloff>DESIGN_Resource/Infobox_info_icon.svg.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0" colspan="3">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>FBG Data (*.txt)</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="1" column="7">
+                 <widget class="QPushButton" name="pushButton_RemoveFBGFiles">
+                  <property name="font">
+                   <font>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Remove File</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="7">
+                 <widget class="QPushButton" name="pushButton_LoadFBGFiles">
+                  <property name="text">
+                   <string>Add Files</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="4">
+                 <widget class="QLabel" name="label_4">
+                  <property name="text">
+                   <string>Number of FBG Sensors:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="7">
+                 <widget class="QPushButton" name="pushButton_FBGClearAll">
+                  <property name="font">
+                   <font>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Clear All</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="5">
+                 <widget class="QSpinBox" name="spinBox_FBGNumber">
+                  <property name="minimum">
+                   <number>1</number>
+                  </property>
+                  <property name="value">
+                   <number>1</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="2">
+                 <widget class="QLabel" name="label_30">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Skip Row:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="3">
+                 <widget class="QSpinBox" name="spinBox_SkipRowFBG">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="value">
+                   <number>2</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QComboBox" name="comboBox_FBGSep">
+                  <property name="font">
+                   <font>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>tab (default)</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>;</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>,</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_6">
+                  <property name="text">
+                   <string>Sep:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="6">
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" rowspan="5" colspan="7">
+                 <widget class="QListWidget" name="listWidget_InputFBG">
+                  <property name="font">
+                   <font>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="7">
+                 <widget class="QPushButton" name="pushButton_FilesFormat_FBG">
+                  <property name="text">
+                   <string>Files Format</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>DESIGN_Resource/Infobox_info_icon.svg.png</normaloff>DESIGN_Resource/Infobox_info_icon.svg.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>This input interface was developed for the data obtained by: BraggMeter Fibersensing (FBG) and DaqPRO 5300 (Thermocouple)</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>(2) Data Sync</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_DataSync">
+           <property name="text">
+            <string>Data Sync.</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QProgressBar" name="progressBar_sync">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="pushButton_SaveSyncData">
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Save Sync Data</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>(3) Residual Strain Calculation</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="0" column="0" colspan="3">
+            <widget class="QLabel" name="label_8">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Select the FBG:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_9">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Select the Thermocouple:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="3" colspan="3">
+            <widget class="QListWidget" name="listWidget_SelectFBG"/>
+           </item>
+           <item row="1" column="4" rowspan="6">
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Method Parameters:</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="gridLayout_12">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_12">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;F.O. Photo-elastic coefficient &lt;/span&gt;(pe)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineEdit_PhotoElastic">
+                  <property name="text">
+                   <string>0.22</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" rowspan="2">
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;F.O. Thermal-Expansion coefficient &lt;/span&gt;(&lt;span style=&quot; font-family:'Calibri,sans-serif'; font-size:11pt;&quot;&gt;α&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" rowspan="2">
+                 <widget class="QLineEdit" name="lineEdit_ThermalExpansion">
+                  <property name="text">
+                   <string>4.0E-6</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0" rowspan="2">
+                 <widget class="QLabel" name="label_11">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;F.O. Thermo-optic coefficient&lt;/span&gt; (ξ )&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1" rowspan="2">
+                 <widget class="QLineEdit" name="lineEdit_ThermoOptic">
+                  <property name="text">
+                   <string>0.55E-6</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0" rowspan="2">
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gel-Point tolerance (Strain)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1" rowspan="2">
+                 <widget class="QLineEdit" name="lineEdit_tolerance">
+                  <property name="text">
+                   <string>0.0001</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="label_14">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Temperature threshold (&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt;C)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLineEdit" name="lineEdit_TempThresh">
+                  <property name="text">
+                   <string>25.0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QCheckBox" name="checkBox">
+             <property name="text">
+              <string>Advanced Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="3" rowspan="6">
+            <widget class="QListWidget" name="listWidget_SelectThermocouple"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QRadioButton" name="radioButton_absolutevalue">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Absolute value</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QRadioButton" name="radioButton_wavlengthshift">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Wavelength shift</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLineEdit" name="lineEdit_originalwavelength">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>1550.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>FBG Data format:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_16">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Original&lt;/span&gt; λ&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_ResidualStrainCalc">
+             <property name="text">
+              <string>(4) Residual Strain Calculation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QProgressBar" name="progressBar_residual">
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_ResidualPlot">
+             <property name="text">
+              <string>Plot</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="pushButton_ResidualSave">
+             <property name="text">
+              <string>Save Data (*CSV)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCopyrigth"/>
+   <addaction name="actionAbouttheauthor"/>
+   <addaction name="separator"/>
+   <addaction name="actionExitProgram"/>
+  </widget>
+  <action name="actionCopyrigth">
+   <property name="icon">
+    <iconset>
+     <normaloff>DESIGN_Resource/plot.png</normaloff>DESIGN_Resource/plot.png</iconset>
+   </property>
+   <property name="text">
+    <string>About the FBG_ReStrain/Copyrigth</string>
+   </property>
+   <property name="toolTip">
+    <string>Software information and Copyrigth</string>
+   </property>
+  </action>
+  <action name="actionExitProgram">
+   <property name="icon">
+    <iconset>
+     <normaloff>DESIGN_Resource/exit.png</normaloff>DESIGN_Resource/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit Program</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit Program (the data is not saved)</string>
+   </property>
+  </action>
+  <action name="actionAbouttheauthor">
+   <property name="icon">
+    <iconset>
+     <normaloff>DESIGN_Resource/author.png</normaloff>DESIGN_Resource/author.png</iconset>
+   </property>
+   <property name="text">
+    <string>About the Author</string>
+   </property>
+   <property name="toolTip">
+    <string>Information about the FBG_SiMul author</string>
+   </property>
+  </action>
+  <action name="actionAddFBGFiles">
+   <property name="text">
+    <string>AddFBGFiles</string>
+   </property>
+  </action>
+  <action name="actionAddTempFiles">
+   <property name="text">
+    <string>AddTempFiles</string>
+   </property>
+  </action>
+  <action name="actionRemoveFBGfile">
+   <property name="text">
+    <string>RemoveFBGfile</string>
+   </property>
+  </action>
+  <action name="actionRemoveTempfile">
+   <property name="text">
+    <string>RemoveTempfile</string>
+   </property>
+  </action>
+  <action name="actionFBGClearFiles">
+   <property name="text">
+    <string>FBGClearFiles</string>
+   </property>
+  </action>
+  <action name="actionTempClearFiles">
+   <property name="text">
+    <string>TempClearFiles</string>
+   </property>
+  </action>
+  <action name="actionDataSync">
+   <property name="text">
+    <string>DataSync</string>
+   </property>
+  </action>
+  <action name="actionSaveSyncData">
+   <property name="text">
+    <string>SaveSyncData</string>
+   </property>
+  </action>
+  <action name="actionResidualStrainCalcul">
+   <property name="text">
+    <string>ResidualStrainCalcul</string>
+   </property>
+  </action>
+  <action name="actionResidualSave">
+   <property name="text">
+    <string>ResidualSave</string>
+   </property>
+  </action>
+  <action name="actionPlotResidual">
+   <property name="text">
+    <string>PlotResidual</string>
+   </property>
+  </action>
+  <action name="actionFilesFormat_FBG">
+   <property name="text">
+    <string>FilesFormat_FBG</string>
+   </property>
+  </action>
+  <action name="actionFilesFormat_Term">
+   <property name="text">
+    <string>FilesFormat_Term</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_ClearMessageBoard</sender>
+   <signal>clicked()</signal>
+   <receiver>MessageBoard</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1048</x>
+     <y>869</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1016</x>
+     <y>768</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_LoadFBGFiles</sender>
+   <signal>clicked()</signal>
+   <receiver>actionAddFBGFiles</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>730</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_LoadTempFiles</sender>
+   <signal>clicked()</signal>
+   <receiver>actionAddTempFiles</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>731</x>
+     <y>387</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_RemoveFBGFiles</sender>
+   <signal>clicked()</signal>
+   <receiver>actionRemoveFBGfile</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>730</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_RemoveTempFiles</sender>
+   <signal>clicked()</signal>
+   <receiver>actionRemoveTempfile</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>731</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_FBGClearAll</sender>
+   <signal>clicked()</signal>
+   <receiver>actionFBGClearFiles</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>730</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_TempClearAll</sender>
+   <signal>clicked()</signal>
+   <receiver>actionTempClearFiles</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>731</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_DataSync</sender>
+   <signal>clicked()</signal>
+   <receiver>actionDataSync</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>588</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_SaveSyncData</sender>
+   <signal>clicked()</signal>
+   <receiver>actionSaveSyncData</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>744</x>
+     <y>588</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_6</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>775</x>
+     <y>656</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>681</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_ResidualStrainCalc</sender>
+   <signal>clicked()</signal>
+   <receiver>actionResidualStrainCalcul</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>880</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_wavlengthshift</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_16</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>824</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>833</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_wavlengthshift</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_originalwavelength</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>834</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>830</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_ResidualSave</sender>
+   <signal>clicked()</signal>
+   <receiver>actionResidualSave</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>713</x>
+     <y>866</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_ResidualPlot</sender>
+   <signal>clicked()</signal>
+   <receiver>actionPlotResidual</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>866</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_FilesFormat_FBG</sender>
+   <signal>clicked()</signal>
+   <receiver>actionFilesFormat_FBG</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>783</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_FilesFormat_Term</sender>
+   <signal>clicked()</signal>
+   <receiver>actionFilesFormat_Term</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>784</x>
+     <y>486</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
